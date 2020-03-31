@@ -1,0 +1,34 @@
+RewriteEngine on
+
+RewriteRule ^index\.mu$ index.php?view=home
+RewriteRule ^hal-index-(.*)\.mu$ index.php?view=home&halutama=$1 [L]
+RewriteRule ^pendaftaran\.mu$ index.php?view=pendaftaran&id=$1 [L]
+RewriteRule ^login\.mu$ index.php?view=login&id=$1 [L]
+RewriteRule ^detail-journal-(.*)\.mu$ index.php?view=detail&journal=$1 [L]
+RewriteRule ^journal-(.*)\.mu$ index.php?view=kategori&kat=$1 [L]
+RewriteRule ^hal-journal-(.*)-([0-9]+)\.mu$ index.php?view=kategori&kat=$1&halkat=$2 [L]
+RewriteRule ^my-journal\.mu$ index.php?view=myjournal&id=$1 [L]
+RewriteRule ^list-journal\.mu$ index.php?view=listjournal&id=$1 [L]
+RewriteRule ^editor-list-journal\.mu$ index.php?view=listjournaleditor&id=$1 [L]
+RewriteRule ^account\.mu$ index.php?view=account&id=$1 [L]
+
+RewriteRule ^detail-keuangan-perkara\.mu$ index.php?view=detailkeuangan&id=$1 [L]
+RewriteRule ^perkara-luar-(.*)\.mu$ index.php?view=perkaraluar&status=$1 [L]
+RewriteRule ^hal-perkara-luar-(.*)-([0-9]+)\.mu$ index.php?view=perkaraluar&status=$1&halluar=$2 [L]
+
+RewriteRule ^permohonan-bantuan\.mu$ index.php?view=permohonanbantuan&id=$1 [L]
+RewriteRule ^informasi-detail-perkara-(.*)\.mu$ index.php?view=detaildalam&perkara=$1 [L]
+RewriteRule ^jadwal-sidang\.mu$ index.php?view=jadwalsidang&id=$1 [L]
+RewriteRule ^pencarian-perkara\.mu$ index.php?view=pencarianperkara&id=$1 [L]
+RewriteRule ^hasil-pencarian-nama-perkara\.mu$ index.php?view=pencarianperkaranama&id=$1 [L]
+RewriteRule ^rekap-perkara\.mu$ index.php?view=rekapperkara&id=$1 [L]
+RewriteRule ^putusan\.mu$ index.php?view=putusan&id=$1 [L]
+RewriteRule ^hal-putusan-(.*)\.mu$ index.php?view=putusan&halputusan=$1 [L]
+RewriteRule ^sisa-panjar\.mu$ index.php?view=sisapanjar&id=$1 [L]
+RewriteRule ^hal-sisa-panjar-(.*)\.mu$ index.php?view=sisapanjar&halpanjar=$1 [L]
+
+RewriteRule ^isbat-nikah\.mu$ index.php?view=isbatnikah&id=$1 [L]
+RewriteRule ^hal-isbat-nikah-(.*)\.mu$ index.php?view=isbatnikah&halisbatnikah=$1 [L]
+
+RewriteRule ^panggilan-ghoib\.mu$ index.php?view=panggilanghoib&id=$1 [L]
+RewriteRule ^hal-panggilan-ghoib-(.*)\.mu$ index.php?view=panggilanghoib&halghoib=$1 [L]
